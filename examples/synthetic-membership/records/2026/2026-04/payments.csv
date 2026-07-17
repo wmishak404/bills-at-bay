@@ -1,0 +1,3 @@
+membership_group_id,month,billing_date,rule_version,member_name,role,amount_due,payment_status,amount_paid,date_paid,payment_method,payment_recipient,source_report,notes
+synthetic-bayclub-example,2026-04,2026-04-01,2026-07-16,Blair Shared,shared_member,204.00,pending,0.00,,Venmo,primary member,records/2026/2026-04/report.md,"Synthetic pending payment."
+synthetic-bayclub-example,2026-04,2026-04-01,2026-07-16,Casey Shared,shared_member,204.00,pending,0.00,,Venmo,primary member,records/2026/2026-04/report.md,"Synthetic pending payment."

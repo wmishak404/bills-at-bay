@@ -1,0 +1,6 @@
+date,reference,description,amount
+2026-03-16,C EXAMPLE-001,Payment - Thank You,-600.00
+2026-03-16,T EXAMPLE-002,Credit Card Surcharge,12.01
+2026-04-01,T EXAMPLE-003,April Dues,300.00
+2026-04-01,T EXAMPLE-004,April Dues (EXAMPLE-SHARED-002 B Shared),150.00
+2026-04-01,T EXAMPLE-005,April Dues (EXAMPLE-SHARED-003 C Shared),150.00

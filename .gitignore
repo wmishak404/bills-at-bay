@@ -1,0 +1,11 @@
+# Private membership adapters contain real names, member IDs, statements,
+# reports, payments, and generated outputs. Keep them local/private by default.
+/memberships/*
+!/memberships/README.md
+
+# Local exports can contain private billing packets.
+/exports/
+*.local.*
+
+# OS/editor noise.
+.DS_Store

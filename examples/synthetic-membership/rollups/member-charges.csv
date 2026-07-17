@@ -1,0 +1,4 @@
+membership_group_id,month,billing_date,rule_version,charge_type_version,member_name,role,statement_member_id,dues_share,shared_fee_share,member_change_charges,court_fees,guest_fees,pro_shop_sales,unknown_fees,total_due,payment_tracking,source_report,notes
+synthetic-bayclub-example,2026-04,2026-04-01,2026-07-16,2026-07-16,Alex Primary,primary_member,EXAMPLE-PRIMARY-001,200.00,4.01,0.00,0.00,0.00,0.00,0.00,204.01,no,records/2026/2026-04/report.md,"Synthetic primary member; no default shared-member payment row."
+synthetic-bayclub-example,2026-04,2026-04-01,2026-07-16,2026-07-16,Blair Shared,shared_member,EXAMPLE-SHARED-002,200.00,4.00,0.00,0.00,0.00,0.00,0.00,204.00,yes,records/2026/2026-04/report.md,"Synthetic pending payment."
+synthetic-bayclub-example,2026-04,2026-04-01,2026-07-16,2026-07-16,Casey Shared,shared_member,EXAMPLE-SHARED-003,200.00,4.00,0.00,0.00,0.00,0.00,0.00,204.00,yes,records/2026/2026-04/report.md,"Synthetic pending payment."
