@@ -58,6 +58,9 @@ Document dues, recognized shared fees, member-change charges, direct charges, ig
 - Unknown fees:
 - Unmapped aliases:
 - Member-change attribution exceptions:
+- User confirmation needed:
+- Options presented for unresolved member-change attribution:
+- User-selected allocation overrides:
 - Unusual balance/payment patterns:
 
 ## Assumptions

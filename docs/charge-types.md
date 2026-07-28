@@ -1,7 +1,7 @@
 # Charge Types
 
-Version date: 2026-07-16
-Last updated: 2026-07-16
+Version date: 2026-07-28
+Last updated: 2026-07-28
 
 ## Purpose
 
@@ -16,7 +16,7 @@ Use this file to classify every statement line before calculating member totals.
 | Monthly dues | `April Dues`, `March Dues`, `May Dues (P12345678 A Member)` | Sum all month-specific dues lines, then split evenly by active member count. | Monthly roster | Include in dues calculation and roster evidence. |
 | Member-change dues adjustment | `Membership Dues` when not part of a month-specific dues line such as `June Dues` | Assign to the affected added or deleted shared member using line evidence, roster deltas, transaction dates, and prorated dues math. | Affected changed shared member | Include under member-change charges; flag attribution if the changed member cannot be identified. |
 | Credit card surcharge | `Credit Card Surcharge` | Split evenly by active member count for the current statement month, even when transaction timing suggests it relates to the prior balance/payment cycle. | Monthly roster | Include under recognized shared fees and document the timing caveat in the monthly report. |
-| Shared membership processing fee | `Shared Membership Processing Fee` | Treat as a member-change processing charge; observed amounts are `$50.00` and `$100.00` for now. Use the statement amount as printed and assign it to the affected added or deleted shared member using line evidence, roster deltas, and related proration evidence. | Affected changed shared member | Include under member-change charges; flag attribution if the changed member cannot be identified. |
+| Shared membership processing fee | `Shared Membership Processing Fee` | Treat as a member-change processing charge. Processing-fee amounts can vary because of promotions or discounts; when multiple affected changed shared members have processing fees in the same billing packet, pool the processing-fee lines and split the total evenly across those affected changed shared members. | Affected changed shared members | Include under member-change charges; flag attribution if the affected changed-member set cannot be identified. |
 | Court fees | `Court Fees`, `Court Fee`, descriptions containing a member name or alias | Assign to named member when name or alias is present. | Primary member when unnamed | Include under court fees; document extraction evidence for the name match. |
 | Pro shop sales | `Pro Shop Sales`, `Pro Shop` | Assign to named member when a member is explicitly named. | Primary member | Include under pro shop sales. |
 | Guest fees | `Guest Fee`, `Guest Fees` | Assign to the primary member by default; do not split evenly. | Primary member | Include under guest fees. If a future statement names a shared member, flag for review before assigning away from the primary member. |
@@ -40,11 +40,17 @@ The first dues line without parentheses is usually the primary member line, but 
 
 `Membership Dues` without a month name is a member-change dues adjustment, not the recurring monthly dues split. It can represent prorated dues for an addition or subtraction.
 
-`Shared Membership Processing Fee` is a member-change processing fee. Use the statement amount as printed.
+`Shared Membership Processing Fee` is a member-change processing fee. Keep the statement amounts as printed for evidence.
 
-Do not infer that a larger processing-fee amount equals multiple smaller fees unless Bay Club, Connect, or other member-change evidence supports that breakdown. A processing-fee line may represent a distinct processing charge, a bundled operation, or multiple underlying actions. Treat the line as one dated member-change charge group until there is better evidence.
+Processing-fee amounts can vary because of Bay Club promotions or discounts. When multiple affected changed shared members have processing fees in the same statement-month billing packet, sum the processing-fee lines for that packet and divide the total evenly across those affected changed shared members. Example: if a statement has a `$100.00` processing fee and a `$50.00` processing fee for two added shared members, allocate `$75.00` to each added shared member.
 
-When the statement does not name the affected member, use month-over-month roster deltas and proration evidence to infer the changed shared member. If the member still cannot be identified, record an attribution exception instead of assigning the charge to the primary member by default.
+Do not infer that a larger processing-fee amount equals multiple smaller fees. Use statement evidence, roster deltas, prorated dues evidence, and user-provided context to identify the affected changed-member set. If that set cannot be identified, record an attribution exception.
+
+When the statement does not name the affected member, use month-over-month roster deltas and proration evidence to infer the changed shared member.
+
+If billing data can identify the affected changed-member set but cannot identify which member maps to which dated charge, treat that mapping as unknown. Record an attribution exception and ask the user for the missing context. Future reports should make clear that the billing data cannot solve the question by itself.
+
+When asking the user, present available next actions neutrally: provide actual member-change context, leave the amount pending, or choose a consent-based allocation override such as splitting the unattributable prorated-dues total evenly across the affected changed shared members. Do not apply an override unless the user calculating the bill chooses it, and document that choice.
 
 ## Guest Fee Matching
 
